@@ -5,22 +5,63 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Message Board</title>
 		<link rel="stylesheet" href="/stylesheets/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+		/>
 	</head>
 	<body>
 		<main>
 			<%- include('_header') %>
 			<div class="content">
+				<% if (messages.length > 0) { %>
 				<div class="messages">
 					<% messages.forEach(function(message) { %>
 					<div class="message">
 						<p><b>User:</b> <%= message.user %></p>
-						<p><b>Message:</b> <%= message.text %></p>
+						<p>
+							<b>Message:</b>
+							<span class="message-text"
+								><%= message.message %></span
+							>
+						</p>
 						<p><b>Added:</b> <%=message.added%></p>
+						<form action="/" method="post">
+							<input
+								type="hidden"
+								name="_method"
+								value="DELETE"
+							/>
+							<input
+								type="hidden"
+								name="id"
+								value="<%= message.id  %>"
+							/>
+							<button
+								type="submit"
+								class="delete-button"
+								aria-label="Delete message"
+							>
+								<span
+									aria-hidden="true"
+									class="material-symbols-outlined"
+								>
+									delete
+								</span>
+							</button>
+						</form>
 					</div>
 					<% }); %>
 				</div>
+				<% } else { %>
+				<h1>Your board is empty. Add a new message.</h1>
+				<% } %>
 			</div>
-			<a href="/new"><button>New Message +</button></a>
+			<a href="/new"><button class="new-button">New Message +</button></a>
 		</main>
 	</body>
 </html>
