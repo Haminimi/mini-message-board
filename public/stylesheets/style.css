@@ -1,0 +1,172 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+	isolation: isolate;
+}
+
+:root {
+	font-size: 18px;
+}
+
+body {
+	font-family: 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+body {
+	background-color: #101820;
+	color: white;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 15vh;
+	padding: 10px 20px;
+}
+
+.content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 85vh;
+	padding: 30px 0px;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	gap: 20px;
+}
+
+.message {
+	position: relative;
+	padding: 10px;
+	border: 2px solid white;
+	border-radius: 10px;
+	transition: border-color 0.15s linear;
+}
+
+.delete-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+	background-color: inherit;
+	border: none;
+	cursor: pointer;
+	margin-bottom: 15px;
+	margin-right: 10px;
+}
+
+.material-symbols-outlined {
+	color: white;
+	transition: color 0.15s linear;
+}
+
+.material-symbols-outlined:hover {
+	color: crimson;
+}
+
+.new-button,
+.submit-button {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	padding: 5px 15px;
+	margin-right: 40px;
+	margin-bottom: 40px;
+	border: 2px solid white;
+	border-radius: 10px;
+	cursor: pointer;
+	font-size: 26px;
+	color: white;
+	background-color: #101820;
+	transition: border-color 0.15s linear;
+}
+
+.new-button:hover,
+.submit-button:hover,
+.message:hover {
+	border-color: cornflowerblue;
+}
+
+.message-form {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+}
+
+input {
+	margin-bottom: 30px;
+	border-radius: 5px;
+	border: none;
+}
+
+input:focus {
+	outline: 3px solid cornflowerblue;
+}
+
+.message-text {
+	color: cornflowerblue;
+}
+
+.git-hub-link {
+	cursor: pointer;
+	font-size: 40px;
+	color: white;
+	transition: color 0.15s linear;
+}
+
+.git-hub-link:hover {
+	color: cornflowerblue;
+}
