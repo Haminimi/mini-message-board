@@ -7,6 +7,7 @@ A mini message board project built with Express. [The project](https://www.theod
 - **Server Side Routing**
 - **Create, Read and Delete**
 - **Responsive Design**
+
 **To Do:**
 - [ ] **Message Update Functionality**
 ## Tech
