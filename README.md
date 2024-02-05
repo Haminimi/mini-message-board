@@ -13,6 +13,7 @@ A mini message board project built with Express. [The project](https://www.theod
 **The project is built with:**
 - ejs
 - Node.js/Express
+- CSS
 
 **Tools**
 - Git
