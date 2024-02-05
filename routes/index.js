@@ -19,13 +19,13 @@ let messages = [
 		id: uuid.v4(),
 		message: 'Hi there!',
 		user: 'Amando',
-		added: 'Mon Feb 05 2024',
+		added: '2/5/2024',
 	},
 	{
 		id: uuid.v4(),
 		message: 'Hello World!',
 		user: 'Charles',
-		added: 'Mon Feb 05 2024',
+		added: '2/5/2024',
 	},
 ];
 
@@ -47,7 +47,7 @@ router.post('/new', (req, res) => {
 			id: uuid.v4(),
 			user: req.body.user,
 			message: req.body.message,
-			added: new Date().toDateString(),
+			added: new Date().toLocaleString(),
 		});
 		res.redirect('/');
 	} else {
